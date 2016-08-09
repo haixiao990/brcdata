@@ -1,0 +1,14 @@
+language: r
+
+cache: packages
+
+r_binary_packages:
+    - covr
+ 
+r_github_packages:
+    - cdgreenidge/brcbase
+
+after_success:
+  - Rscript -e 'library(covr); codecov()'
+
+warnings_are_errors: true
