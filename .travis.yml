@@ -7,6 +7,6 @@ r_binary_packages:
     - devtools
  
 after_success:
-  - Rscript -e 'library(covr); library(devtools); install_github("cdgreenidge/brcbase", ref = "kevin", overwrite = T); library(brcbase); codecov()'
+  - Rscript -e 'library(covr); codecov()'
 
 warnings_are_errors: true
