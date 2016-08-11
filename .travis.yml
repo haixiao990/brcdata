@@ -6,7 +6,11 @@ r_binary_packages:
     - covr
     - devtools
  
+install:
+    - Rscript -e 'install.packages(c("devtools", "testthat"))'
+    - Rscript -e 'devtools::install_github("cdgreenidge/brcbase", ref = "kevin")'
+
 after_success:
-  - Rscript -e 'library(covr); codecov()'
+  - Rscript -e 'library(covr); print("HELLO WORLD"); codecov()'
 
 warnings_are_errors: true
