@@ -1,8 +1,17 @@
 context("Test MNI 2mm is valid")
 
-test_that("MNI_2mm is a valid BrcFmri with right size and properties", {
+test_that("MNI_2mm has a valid partition", {
+  utils::data("MNI_2mm")
+  expect_true(brcbase:::.isValid_partition(MNI_2mm$parcellation$partition))
+})
+
+test_that("MNI_2mm is a valid BrcFmri", {
   utils::data("MNI_2mm")
   expect_true(brcbase::isValid(MNI_2mm))
+})
+
+test_that("MNI_2mm is has the right properties",{
+  utils::data("MNI_2mm")
   expect_true(all(MNI_2mm$parcellation$dim3d == c(91,109,91)))
   
   partition <- MNI_2mm$parcellation$partition
