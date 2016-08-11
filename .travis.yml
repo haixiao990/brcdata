@@ -4,11 +4,9 @@ cache: packages
 
 r_binary_packages:
     - covr
+    - devtools
  
-r_github_packages:
-    - cdgreenidge/brcbase
-
 after_success:
-  - Rscript -e 'library(covr); codecov()'
+  - Rscript -e 'library(covr); library(devtools); install_github("cdgreenidge/brcbase", ref = "kevin", overwrite = T); brcbase; codecov()'
 
 warnings_are_errors: true
