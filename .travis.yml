@@ -11,6 +11,6 @@ install:
     - Rscript -e 'devtools::install_github("cdgreenidge/brcbase", ref = "kevin")'
 
 after_success:
-  - Rscript -e 'library(covr); print("HELLO WORLD"); codecov()'
+  - Rscript -e 'library(covr); codecov()'
 
 warnings_are_errors: true
