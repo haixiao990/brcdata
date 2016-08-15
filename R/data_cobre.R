@@ -22,10 +22,29 @@ NULL
 #' @name COBRE_0040071_funcSeg
 #' @docType data
 #' @format A BrcFmri object of size 61 x 73 x 61 voxels, of which
-#' there are 82,470 voxels in representing the brain (30.3%). The image is
+#' there are 47,636 voxels in representing the brain (17.5%). The image is
 #' not symmetric. The first 5 time slices are included.
 #' \describe{
-#'   \item{data2d}{1 x 82470 matrix, values representing the anatomical structure}
+#'   \item{data2d}{5 x 47636 matrix, values representing the anatomical structure}
+#'   \item{id}{The id, here "COBRE_0040071"}
+#'   \item{parcellation}{The singleton parcellation}
+#' }
+#' @author Kevin Lin \email{kevinl1@andrew.cmu.edu}
+#' @source Taken from the COBRE study \url{http://fcon_1000.projects.nitrc.org/indi/abide/}
+#' which is part of INDI \url{http://fcon_1000.projects.nitrc.org/}. The data was processed
+#' using C-PAC \url{https://fcp-indi.github.io/}.
+#' @keywords data
+NULL
+
+#' Subject 0040071 in COBRE study, functional
+#'
+#' @name COBRE_0040071_func_AAL
+#' @docType data
+#' @format A BrcFmri object of size 61 x 73 x 61 voxels, of which
+#' there are 47,636 voxels in representing the brain (17.5%). The image is
+#' not symmetric. The parcellations is 
+#' \describe{
+#'   \item{data2d}{150 x 47636 matrix, values representing the anatomical structure}
 #'   \item{id}{The id, here "COBRE_0040071"}
 #'   \item{parcellation}{The singleton parcellation}
 #' }
